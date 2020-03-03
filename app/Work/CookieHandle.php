@@ -1,47 +1,55 @@
 <?php
     namespace App\Work;
-   
+
     use Symfony\Component\CssSelector\CssSelectorConverter;
 
     use Symfony\Component\DomCrawler\Crawler;
 
     class CookieHandle extends Bases
     {
-    
+
 
     /** 
-     * 开始抢购总任务
-     * */  
+    * 开始抢购总任务
+    * */  
     public function dostart()
     {
-        $goodsNum ='202002241823125721';
-        $cookie = "macid=C87E6C3764B0000161E6B4027DB019DC; _ga=GA1.2.879713598.1561188145; pgv_pvi=7768772395; bdshare_firstime=1580351547920; sid=a516dad5-4e59-4322-a652-5e474284c4bc; NOTE_UPDATE_TIME=1583141426968; NOTE_CACHE=%5B%7B%22id%22%3A200%2C%22title%22%3A%22%E6%B5%8B%E6%9C%8D%E9%BE%99%E9%97%A8NPC%E7%BB%B4%E6%8A%A4%22%2C%22content%22%3A%22%22%2C%22addTime%22%3A1432711191000%2C%22context%22%3A%22'TL'%22%2C%22publishUser%22%3A%22%22%2C%22stick%22%3A0%2C%22stickTime%22%3Anull%2C%22deleteFlag%22%3A0%7D%2C%7B%22id%22%3A198%2C%22title%22%3A%22%E5%AE%A0%E7%88%B1%E4%B8%80%E7%94%9F%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BB%B4%E6%8A%A4%E5%AE%8C%E6%88%90%22%2C%22content%22%3A%22%22%2C%22addTime%22%3A1431314942000%2C%22context%22%3A%22'TL'%22%2C%22publishUser%22%3A%22%22%2C%22stick%22%3A0%2C%22stickTime%22%3Anull%2C%22deleteFlag%22%3A0%7D%2C%7B%22id%22%3A197%2C%22title%22%3A%22%E5%AE%A0%E7%88%B1%E4%B8%80%E7%94%9F%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BB%B4%E6%8A%A4%22%2C%22content%22%3A%22%22%2C%22addTime%22%3A1431312451000%2C%22context%22%3A%22'TL'%22%2C%22publishUser%22%3A%22%22%2C%22stick%22%3A0%2C%22stickTime%22%3Anull%2C%22deleteFlag%22%3A0%7D%2C%7B%22id%22%3A196%2C%22title%22%3A%22%E3%80%904%E6%9C%8817%E6%97%A5%E7%BB%B4%E6%8A%A4%E3%80%91%E7%95%85%E6%98%93%E9%98%81.%E9%81%93%E5%85%B7%E5%9D%8A%E7%BB%B4%E6%8A%A4%E5%85%AC%E5%91%8A%22%2C%22content%22%3A%22%22%2C%22addTime%22%3A1429156000000%2C%22context%22%3A%22'TL'%22%2C%22publishUser%22%3A%22%22%2C%22stick%22%3A0%2C%22stickTime%22%3Anull%2C%22deleteFlag%22%3A0%7D%2C%7B%22id%22%3A192%2C%22title%22%3A%22%E3%80%90%E6%96%B0%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8%E3%80%91%E4%BB%A4%E7%89%8C%E5%B1%95%E7%A4%BA%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF%E5%95%A6%EF%BC%81%22%2C%22content%22%3A%22%22%2C%22addTime%22%3A1427165782000%2C%22context%22%3A%22'TL''ZJ'%22%2C%22publishUser%22%3A%22%22%2C%22stick%22%3A0%2C%22stickTime%22%3Anull%2C%22deleteFlag%22%3A0%7D%5D; qrcodeid=81fad67d2927a912cf22125497e0aa2ccdfc3b2e6a8a8d18dfe79a20b2d356a01278833a781abe26f762a0830e0eda8a; COOKIE_GOODS_SCANED=%25E6%258A%2598%25E6%259C%2588%25E4%25BA%25A6%25E6%259B%25BC%25E8%2588%259E%25E3%2583%259A%253D202002241811215538%253D58888.0%253D5%2527%25E6%259E%2597%25E4%25B8%2580%25EF%25BC%258E%253D202002241810585533%253D90900.0%253D1%2527%25E6%25B8%2585%25E9%25A2%25A8%25E5%25A2%25A8%25E7%25AB%25B9%253D202002241810395530%253D4444.0%253D8%2527%25E5%25B0%25B8%25E5%25A4%258F%253D202002241809385511%253D260.0%253D5%2527%25EF%25B9%258E%25E6%2598%25A5%25E5%25A4%25A9%25E3%2582%259E%253D202002241809355510%253D188.0%253D8; JSESSIONID=12608D6159D9F3B4C736E6AA8FF0BC4D";
-        //判断"开始抢购"出现
-        // $startBy = $this->judgeIcon($cookie,$goodsNum);
+        $goodsNum ='202002251301087903';//202002242157489991
+        $cookie = "macid=C87E6C3764B0000161E6B4027DB019DC; _ga=GA1.2.879713598.1561188145; pgv_pvi=7768772395; bdshare_firstime=1580351547920; sid=7d2fc7df-2b75-4e1a-8792-3f106be2b6d6; IMGCODE=ImageCode-1551356-f18c15ce-dd80-44be-8752-2b6097b0c68c-zHHGWU; qrcodeid=ad6238385f6d741cfa162859081fed7122666f42c4f8dfa14eb3c26107d4846e52b66e57626085b63a91281cc96ea2a1; COOKIE_GOODS_SCANED=%25E5%25BE%25A1%25E5%25BD%25B1%25E3%2581%25A5%25E7%2588%25B1%25E4%25BD%25A0%253D202002251258447865%253D200.0%253D4%2527%25E4%25BD%25B3%25E6%2581%25A9%253D202002251258167856%253D188.0%253D4%2527%25E4%25BC%259A%25E5%258F%2591%25E5%2585%2589%25E7%259A%2584%25EF%25BC%258E%25E4%25B8%25B6%253D202002251255397821%253D1000.0%253D8%2527%25EF%25B9%258F%25E5%258D%2583%25E8%2590%258C%25E3%2580%2582%253D202002251255537824%253D11900.0%253D4%2527%25EF%25B9%258F%25E5%2590%259B%25E5%25BF%2583%25E9%25BB%2598%25E9%25BB%2598%25E3%2582%259E%253D202002251254037798%253D1688.0%253D11%2527; JSESSIONID=C82FF9935CA7006BD753F51523325364";
         //判断倒计时
-        $timeBy = $this->judgeTime($cookie,$goodsNum);
+        $this->judgeTime($cookie,$goodsNum);
+
+        while(true){
+        //判断"开始抢购"出现
+        $startBy = $this->judgeSelling($goodsNum);
+        if($startBy==true){
+            echo "开始下单";
+            $result=$this->doCreateOrder($cookie,$goodsNum);
+            print_r("下单结束".$result);
+            die();   
+        };
+        }
     }
 
     /**
-     * 创建订单
-     */
+    * 创建订单
+    */
     public function doCreateOrder($cookie,$goodsNum){
-       $res=$this->getImgTem($cookie,$goodsNum);
-       $code =$res['code'];
-       $pic = $res['id'];
-       if($code){
-           $result=$this->doOrder($goodsNum,$code,$cookie);
-           return $result;
-       }else{
-           echo "识别失败";
-           die();
-       }
+        $res=$this->getImgTem($cookie,$goodsNum);
+        $code =$res['code'];
+        if($code){
+            $result=$this->doOrder($goodsNum,$code,$cookie);
+            return $result;
+        }else{
+            echo "识别失败";
+            die();
+        }
     }
 
 
     /**
-     * 根据图标去识别
-     */
+    * 根据图标去识别
+    */
     public function judgeIcon($goodsNum)
     {
         # 需要代理池去维护 
@@ -50,60 +58,70 @@
         try{
             $hrefs=$crawler->filter('a[class="btn-buy"]')->text(); 
             if($hrefs=="立即购买"){
-                return 1;
+                return true;
             }else{
-                return 2;
+                return false;
             };
         }catch(\Exception $e){
-            return 2;
+            return false;
         }
     }
-    
+
     public function judgeTime($cookie,$goodsNum){
         $html = $this->getHtml($goodsNum); 
         $crawler = new Crawler($html);
         try{
             $time=$crawler->filter('span[class="less-than-day"]')->extract(array('data-second', 'class'));
             $time=(int)$time[0][0];
-            // sleep($time);   
-            $isTrue=$this->judgeIcon($goodsNum);
-            while(true){
-                if($isTrue==1){
-                    echo "开始下单";
-                    // $result=$this->doCreateOrder($cookie,$goodsNum);
-                    // print_r("下单结束".$result);
-                    die();   
-            };
-            }
+            sleep($time);
         }catch(\Exception $e){
             print_r("COOKIE 失效");
             die("!2312"); 
         }
     }
 
+    public function judgeSelling($goodsNum)
+    {
+        # code...
+        $html = $this->getSelling($goodsNum);
+        $crawler = new Crawler($html);
+        $goodsLink=$crawler->filterXPath('//*[@id="J_good_list"]/li[1]/span/a')->extract(array('href', 'class'));; 
+        try{
+        $goodsLink = $goodsLink[0][0];
+        $goodsLinkNumber=substr($goodsLink,-18);
+        
+        if($goodsLinkNumber==$goodsNum){
+            return true;
+        }
+        }catch(\Exception $e){
+        
+            return false;
+        }
+        
+
+    }
+
     public function getSelling($goodsNum)
     {
         # code...
-        $curl = curl_init();
-
-        $proxyUrl = "118.25.45.211";
-        $proxyPort = 2587;
-        curl_setopt_array($curl, array(
-          CURLOPT_URL => "http://tl.cyg.changyou.com/goods/char_detail?serial_num=$goodsNum",
-          CURLOPT_HEADER=>0,
-          CURLOPT_RETURNTRANSFER => true,
-          CURLOPT_ENCODING => "",
-          CURLOPT_MAXREDIRS => 10,
-          CURLOPT_TIMEOUT => 10,
-          CURLOPT_FOLLOWLOCATION => true,
-          CURLOPT_PROXY =>$proxyUrl,
-          CURLOPT_PROXYPORT=>$proxyPort,
-          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-          CURLOPT_CUSTOMREQUEST => "POST",
-        ));
         
-        $response = curl_exec($curl);
+    $curl = curl_init();
 
+    curl_setopt_array($curl, array(
+    CURLOPT_URL => "http://tl.cyg.changyou.com/goods/selling?world_id=0&order_by=remaintime-desc&have_chosen=&page_num=1#goodsTag",
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => "",
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 0,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => "GET",
+    CURLOPT_HTTPHEADER => array()
+    ));
+
+    $response = curl_exec($curl);
+
+    curl_close($curl);
         
         return $response;
     }
@@ -115,17 +133,17 @@
         $proxyUrl = "118.25.45.211";
         $proxyPort = 2587;
         curl_setopt_array($curl, array(
-          CURLOPT_URL => "http://tl.cyg.changyou.com/goods/char_detail?serial_num=$goodsNum",
-          CURLOPT_HEADER=>0,
-          CURLOPT_RETURNTRANSFER => true,
-          CURLOPT_ENCODING => "",
-          CURLOPT_MAXREDIRS => 10,
-          CURLOPT_TIMEOUT => 10,
-          CURLOPT_FOLLOWLOCATION => true,
-          CURLOPT_PROXY =>$proxyUrl,
-          CURLOPT_PROXYPORT=>$proxyPort,
-          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-          CURLOPT_CUSTOMREQUEST => "POST",
+            CURLOPT_URL => "http://tl.cyg.changyou.com/goods/char_detail?serial_num=$goodsNum",
+            CURLOPT_HEADER=>0,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 10,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_PROXY =>$proxyUrl,
+            CURLOPT_PROXYPORT=>$proxyPort,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "POST",
         ));
         
         $response = curl_exec($curl);
@@ -134,7 +152,7 @@
         return $response;
     }
 
-    
+
 
     public function getImgTem($cookie,$goodsNum)
     {
@@ -173,7 +191,7 @@
         echo "\n";
 
         echo json_encode($result);
-       
+        
         if(!empty($result['code'])){
             return $result;
         }else{
@@ -184,40 +202,40 @@
 
     public function doOrder($goodsNum,$code,$cookie)
     {
-       
-$curl = curl_init();
+        
+        $curl = curl_init();
 
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "http://tl.cyg.changyou.com/transaction/buy?=",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 0,
-  CURLOPT_FOLLOWLOCATION => true,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "goods_serial_num=$goodsNum&captcha_code=$code",
-  CURLOPT_HTTPHEADER => array(
-    "Cookie: "."$cookie",
-    "Content-Type: application/x-www-form-urlencoded",
-    "User-Agent: PostmanRuntime/7.22.0",
-    "Accept: */*",
-    "Cache-Control: no-cache",
-    "Postman-Token: fc64ff82-f09a-489b-a25c-be97360519a9",
-    "Host: tl.cyg.changyou.com",
-    "Accept-Encoding: gzip, deflate, br",
-    "Content-Length: 53",
-    "Connection: keep-alive"
-  ),
-));
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => "http://tl.cyg.changyou.com/transaction/buy?=",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS => "goods_serial_num=$goodsNum&captcha_code=$code",
+        CURLOPT_HTTPHEADER => array(
+        "Cookie: "."$cookie",
+        "Content-Type: application/x-www-form-urlencoded",
+        "User-Agent: PostmanRuntime/7.22.0",
+        "Accept: */*",
+        "Cache-Control: no-cache",
+        "Postman-Token: fc64ff82-f09a-489b-a25c-be97360519a9",
+        "Host: tl.cyg.changyou.com",
+        "Accept-Encoding: gzip, deflate, br",
+        "Content-Length: 53",
+        "Connection: keep-alive"
+        ),
+    ));
 
-$response = curl_exec($curl);
+    $response = curl_exec($curl);
 
-curl_close($curl);
-// echo $response;
-// print_r($response);
+    curl_close($curl);
+    // echo $response;
+    // print_r($response);
 
-return $response;
+    return $response;
     }
 
 
