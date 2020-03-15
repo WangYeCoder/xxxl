@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('/tlbb', 'tlbbController@index');
 
 Route::get('/proxy', 'proxyController@index');
+
+Route::get('/ebbinghaus', 'EbbinghausController@index');
